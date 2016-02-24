@@ -31,7 +31,8 @@ fetch_meteor() {
 
   head "Fetching Meteor $METEOR_VERSION"
   PACKAGE="$CACHE_DIR/meteor-$METEOR_VERSION.tar.gz"
-  TARBALL_URL="https://d3sqy0vbqsdhku.cloudfront.net/packages-bootstrap/${METEOR_VERSION}/meteor-bootstrap-os.linux.x86_64.tar.gz"
+  # TARBALL_URL="https://d3sqy0vbqsdhku.cloudfront.net/packages-bootstrap/${METEOR_VERSION}/meteor-bootstrap-os.linux.x86_64.tar.gz"
+  TARBALL_URL="https://d3sqy0vbqsdhku.cloudfront.net/dev_bundle_Linux_x86_64_0.5.25.tar.gz" # Hacked the beta URL
   if [ ! -e "$PACKAGE" ]; then
     curl -o "$PACKAGE" "$TARBALL_URL" | indent
   else
