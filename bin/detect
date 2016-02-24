@@ -1,7 +1,7 @@
 #!/bin/sh
 # USAGE bin/detect BUILD_DIR
 
-if [ -d $1/.meteor ]; then
+if [ -d $1/app/.meteor ]; then
   echo "meteor"
   exit 0
 else
