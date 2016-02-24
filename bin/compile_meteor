@@ -20,7 +20,7 @@ source $bp_dir/bin/common.sh
 
 fetch_meteor() {
   # We determine the desired Meteor version from .meteor/release
-  METEOR_VERSION=`cat "$APP_SOURCE/.meteor/release" | sed 's/METEOR@//'`
+  METEOR_VERSION=`cat "$APP_SOURCE/app/.meteor/release" | sed 's/METEOR@//'`
 
   # if there are old cached versions, we should delete them
   (
