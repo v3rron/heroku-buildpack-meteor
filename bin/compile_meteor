@@ -35,7 +35,7 @@ fetch_meteor() {
   # TARBALL_URL="https://github.com/meteor/meteor/archive/release/METEOR@${METEOR_VERSION}.tar.gz"
   TARBALL_URL="https://codeload.github.com/meteor/meteor/tar.gz/release/METEOR@${METEOR_VERSION}"
   if [ ! -e "$PACKAGE" ]; then
-    curl -ov "$PACKAGE" "$TARBALL_URL" | indent
+    curl -o "$PACKAGE" "$TARBALL_URL" | indent
   else
     info "Using cached Meteor $METEOR_VERSION"
   fi
